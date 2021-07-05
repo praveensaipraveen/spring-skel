@@ -54,3 +54,31 @@ Right click on com.cepheid.cloud.skel.ItemControllerTest and select Run As -> JU
 * https://spring.io/projects/spring-boot
 * https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
 * https://www.h2database.com/html/main.html
+
+
+=================================================================================================>
+rest apis and sample input jsons wherever needed 
+=================================================================================================>
+1) POST http://localhost:9443/app/api/1.0/items/create        //create a new item
+
+{
+    "namyue":"Iron Man IV",
+    "state":"valid",
+    "descriptions" : [{"description":"Iron"},{"description":"Man"},{"description":"III"}]
+}
+
+
+2) PUT http://localhost:9443/app/api/1.0/items/4    //updateById
+
+{
+    "name":"Iron Man 8"
+}
+
+
+3) DELETE http://localhost:9443/app/api/1.0/items/4   //deleteById
+
+4) GET http://localhost:9443/app/api/1.0/items   //getAll
+
+5) GET http://localhost:9443/app/api/1.0/items/name/{name}  //getByName;   like operator and case-insensitive 
+
+6) GET http://localhost:9443/app/api/1.0/items/state/{state}  //getByState;   {undefined,invalid,valid} allowed
